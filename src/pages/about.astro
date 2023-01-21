@@ -1,11 +1,8 @@
 ---
 
-import '../styles/global.css';
-import Navigation from '../components/Navigation.astro';
-import Footer from '../components/Footer.astro';
 
+import BaseLayout from "../layouts/BaseLayout.astro";
 
-const pageTitle = "About Me";
 
 const identity = {
     firstName: "Jay",
@@ -24,6 +21,9 @@ const skillColor = "navyblue";
 const fontWeight = "bold";
 const textCase = "uppercase"
 
+const pageTitle = "About Page";
+const testNumber = "550";
+
 ---
 
 <html lang="en">
@@ -35,10 +35,10 @@ const textCase = "uppercase"
 		<title>{pageTitle}</title>
 
         <style define:vars={{skillColor, fontWeight, textCase}}>
-            h1 {
+            /* h1 {
               color: purple;
               font-size: 4rem;
-            }
+            } */
             .skill {
                 color: green;
                 color: var(--skillColor);
@@ -49,7 +49,8 @@ const textCase = "uppercase"
 
 	</head>
     <body>
-            <Navigation />
+         
+            <BaseLayout>
             <h1>{pageTitle}</h1>
 
             <h2>... and my new Astro site</h2>
@@ -75,7 +76,15 @@ const textCase = "uppercase"
 
             {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days</p>}
 
-            <Footer />
+            <p>
+                This is the test number: <strong>{testNumber}</strong> 
+            </p>
+
+       
+            </BaseLayout>
+            <script>
+                 import "../scripts/menu.js";
+            </script>
 
       </body>
 </html>
