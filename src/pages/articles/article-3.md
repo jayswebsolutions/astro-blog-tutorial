@@ -1,0 +1,15 @@
+---
+layout: ../../layouts/MarkdownPostLayout.astro
+title: My Third Article
+author: Bruce Springsteen
+description: "Born in the USA!"
+image: 
+    url: "https://astro.build/assets/blog/astro-showcase/astro-showcase-screenshot.jpg"
+    alt: "Thumbnails of websites from the Astro Showcase site."
+pubDate: 2022-07-08
+tags: ["astro","successes"]
+---
+
+## This is the article!!
+
+After a successful first week learning Astro, I decided to try some more. I wrote and imported a small component from memory!
